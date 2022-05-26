@@ -1,0 +1,1 @@
+kubeadm join 10.156.0.39:6443 --token wye83a.h0rgdzqu56l8sgrw --discovery-token-ca-cert-hash sha256:bc9f93881a6d90298fd6d5e8c3d45a16d4ca2e3891bef140cea4e09cee0f3be2 

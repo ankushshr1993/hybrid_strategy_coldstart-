@@ -1,0 +1,35 @@
+controller:
+  replicaCount: 2
+whisk:
+  ingress:
+    type: NodePort
+    apiHostName: 34.89.152.78
+    apiHostPort: 31001
+  limits:
+    actionsInvokesPerminute: 150
+    actionsInvokesConcurrent: 150
+    triggersFiresPerminute: 150
+    actionsSequenceMaxlength: 100
+  # Amount of memory per invoker
+  containerPool:
+    # At 256 MB per action, this allows 256 MB x 150 user actions = 38400 MB per invoker
+    userMemory: "38400m"
+k8s:
+  persistence:
+    enabled: false
+nginx:
+  httpsNodePort: 31001
+invoker:
+  containerFactory:
+    impl: "kubernetes"
+metrics:
+  prometheusEnabled: true
+metrics:
+  userMetricsEnabled: true
+affinity:
+  enabled: false
+limits:
+    actionsInvokesConcurrent: 30
+    containerPool.userMemory: 12800
+containerPool:
+    userMemory: "24000m"
