@@ -1,0 +1,1 @@
+kubeadm join 10.156.0.16:6443 --token srmolg.5wuasxyzmzv33nez --discovery-token-ca-cert-hash sha256:1b2d8ffc87d747741aa4f2d0ffb421076df161fa25a67b01c807403fbe79f1ff 

@@ -10,6 +10,8 @@ import csv
 # Define command line arguments
 args = sys.argv
 
+# Trigger Algo 
+
 # Set up Kubernetes node label command
 if args[4] == "1":
     node = "worker-node1"
